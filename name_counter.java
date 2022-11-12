@@ -4,46 +4,41 @@
  * the user enters the age
  * the program through the length property it display the number of words in the name
  * the program via the age it determines if the age of the programmer is even or odd,
- * 
- * 
+ * please when testing click with arrow at the end of the statement and pace enter once and later press at the end of the statement 
+ * you can also  press enter but it will land u in a compile eror
  */
+
 package Name;//the name of the folder
+
+import java.util.Arrays;
 import java.util.Scanner;// It is the easiest way to read input in a Java program
 /**
  * @author my documentation
  *
  */
-public class name_counter {
-	public static void main(String[]args)
-	{
-		//here is where i introduce my variable to store my value
-	Short  Sname ;
-	int age;
+public class counter_variables {
 
-	
-		Scanner input = new Scanner(System.in);//Here, we have created an object of Scanner named input 
-	
-	System.out.println("enter your age");
-	age=input.nextInt();//allows input of values
-	//Scanner reader =new Scanner(System.in);
-	System.out.println("enter your age");
-	age=input.nextInt();
-	if (age %2==0)//divide by modulus where if there is no remainder it will output even and otherwise it will output odd
-		System.out.print(age+"is even");
-		else
-			System.out.print(age + "odd");
-	
-	System.out.println("enter your surname");
-
-	Sname=input.nextString();
-	int counter=Sname.split("\\s").length;
-	System.out.println("the  number of characters in your surname is:"+(counter)+"bytes" );
-	
-
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
-	}
-
+		 String sname, display;
+		 int age;
+	      Scanner s = new Scanner(System.in);
+	      
+	      System.out.println("what is your name : ");//user is allowed to enter the name
+	      sname = s.nextLine();
+	      
+	      System.out.println("oooh and what about your age : ");//user is allowed to enter tthe age
+	      age = s.nextInt();
+	      
+	      if(age%2 == 0) {//if there is no remainder then it is divisible
+	    	  display = "And your age is an even number";
+	      } else {
+	    	 display = "And your age is an odd number";
+	      }
+	      
+	      
+	      
+	      System.out.println("The length of your name is :"+sname.length() + "\n"+display);
 }
-/*String words = "One Two Three Four";
-int countWords = words.split("\\s").length;
-System.out.println(countWords);*/
+}
